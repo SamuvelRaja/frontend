@@ -11,8 +11,8 @@ header{
 
 }
 img{
-    position: absolute;
-    margin-left: 150px;
+    width: 70%;
+    margin-left: 50px;
 }
 * {
     box-sizing: border-box;
