@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #2d2a3d;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 10%;
+  }
+  .dragBtn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: darkcyan;
+    color: #fff;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    box-shadow: 5px 5px 40px #000;
+    outline: none;
+    top: 10%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />    
+    <h1>Draggable Element</h1>
+    <button type="button" class="dragBtn"><i class="fas fa-bars"></i></button> 
+<script>
+const dragBtns = document.querySelectorAll(".dragBtn");
+dragBtns.forEach((dragBtn) => {
+  const drag = (e) => {
+    dragBtn.style.top = e.pageY + "px";
+    dragBtn.style.left = e.pageX + "px";
+  };
+
+  /*function drag(e) {
+
+          }*/
+
+  dragBtn.addEventListener("mousedown", () => {
+    window.addEventListener("mousemove", drag);
+  });
+
+  window.addEventListener("mouseup", () => {
+    window.removeEventListener("mousemove", drag);
+  });
+});
+</script>
+
+</body>
+</html>
+
+<!-- const one= document.getElementById("dragImg");
+    const two=document.getElementsByClassName("box");
+
+    one.addEventListener('dragstart',dragStart);
+    one.addEventListener('dragend',dragEnd);
+    for(let box of two){
+        box.addEventListener('dragover',dragOver);
+        box.addEventListener('dragenter',dragEnter);
+        box.addEventListener('dragleave',dragLeave);
+        box.addEventListener('drop',Drop);
+    }
+    function dragStart(){
+        setTimeout(() =>(this.className = 'invisible'),0);
+    }
+    function dragEnd(){
+        this.className='one'
+    }
+ -->
+
+
+
+  
