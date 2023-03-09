@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resheader.css"/>
+    <title>Responsive header</title>
+</head>
+<body>
+  <section class="first">
+    <header>
+      <nav class="nav">
+       
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+        <a href="/" class="logo">
+          <img src="./mobile-logo.svg" class="mob_logo"/>
+      </a>
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <span class ="hide__md">Sign in</span>
+        <div class="nav_link hide">
+          <a href="#">Home</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#careers">Careers</a>
+          <a href="#access" class="hide_have"><span class="hide-access hide-dt">Have Access Already?</span>
+            <b class ="hide_sign">Sign in</b>
+          </a>
+          </div>
+      </nav>
+    </header>
+    
+</section>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLink = document.querySelector('.nav_link');
+        hamburger.addEventListener('click', () => {
+        navLink.classList.toggle('hide');
+});
+    </script>
+</body>
+</html>

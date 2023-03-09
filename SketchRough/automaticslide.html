@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sketch.css"/>
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides_1 {display: none;}
+/* The dots/bullets/indicators */
+.dot_1 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active6 {
+  background-color: #717171;
+}
+
+.active1{
+    color:#FB8989;
+   }
+</style>
+</head>
+<body>
+<div>
+    <div id="myBtn">
+        <button class="tablinks link dot_5" onclick="openNav('websites')" >Websites</button>
+        <button class="tablinks link dot_5" onclick="openNav('prototyping')">Prototyping</button>
+        <button class="tablinks link dot_5" onclick="openNav('icons')">Icons1</button>
+        <button class="tablinks link dot_5" onclick="openNav('icons')">Icons2</button>
+        <button class="tablinks link dot_5" onclick="openNav('icons')">Icons3</button>
+        <button class="tablinks link dot_5" onclick="openNav('icons')">Icons4</button>
+    </div>
+
+<div class="img_show mySlides_1" id="websites">
+    
+  <img src="./feature-1@2x (1).avif" style="width:100%">
+  
+</div>
+
+<div class="img_show mySlides_1" id="prototyping">
+   
+  <img src="./feature-1@2x (2).avif" style="width:100%">
+ 
+</div>
+
+<div class="img_show mySlides_1" id="icons">
+    
+  <img src="./feature-1@2x (3).avif" style="width:100%">
+ 
+</div>
+<div class="img_show mySlides_1" id="icons">
+    
+    <img src="./feature-1@2x (3).avif" style="width:100%">
+   
+  </div>
+  <div class="img_show mySlides_1" id="icons">
+    
+    <img src="./feature-1@2x (3).avif" style="width:100%">
+   
+  </div>
+  <div class="img_show mySlides_1" id="icons">
+    <img src="./feature-1@2x (3).avif" style="width:100%">
+   
+  </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot_1"></span> 
+  <span class="dot_1"></span> 
+  <span class="dot_1"></span> 
+  <span class="dot_1"></span>
+  <span class="dot_1"></span>
+  <span class="dot_1"></span>
+</div>
+
+<script>
+    //automatic slide show
+let slideIndex6 = 0;
+showSlides6();
+
+function showSlides6(){
+  let i;
+  let slides_1 = document.getElementsByClassName("mySlides_1");
+  let dots_1 = document.getElementsByClassName("dot_1");
+  let dots5 = document.getElementsByClassName("dot_5");
+  for (i = 0; i < slides_1.length; i++) {
+    slides_1[i].style.display = "none";  
+  }
+  slideIndex6++;
+  if (slideIndex6 > slides_1.length) {slideIndex6 = 1}   
+  for (i = 0; i < dots_1.length; i++) {
+    dots_1[i].className = dots_1[i].className.replace(" active6", "");
+    dots5[i].className = dots5[i].className.replace(" active1", "");
+  }
+  slides_1[slideIndex6-1].style.display = "block";  
+  dots_1[slideIndex6-1].className += " active6";
+  dots5[slideIndex6-1].className += " active1";
+  setTimeout(showSlides6, 3000); // Change image every 3 seconds
+}
+
+//button navigation
+
+// Add active class to the current button (highlight it)
+var head = document.getElementById("myBtn");
+var btns = head.getElementsByClassName("link");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function() {
+var current = document.getElementsByClassName("active1");
+current[0].className = current[0].className.replace(" active1", "");
+this.className += " active1";
+
+});
+}
+</script>
+
+</body>
+</html> 

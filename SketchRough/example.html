@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sketch.css"/>
+    <style>
+  
+</style>
+    </head>
+    <body>
+      <section>
+        <div class="tab1">
+            <button class="dot_6" onclick="openTab(view)">View</button>
+            <button class="dot_6" onclick="openTab(test)">Test</button>
+            <button class="dot_6" onclick="openTab(Organize)">Organize</button>
+            <button class="dot_6" onclick="openTab(comment)">Comment</button>
+            <button class="dot_6" onclick="openTab(inspect)">Inspect</button>
+            <button class="dot_6" onclick="openTab(handoff)">Handoff</button>
+          </div>
+    </section>
+    <section class="last">
+        <div class="mySlides_2" id="view">
+            <img src="./web-app-view@2x.avif">
+        </div>
+        <div class="mySlides_2" id="test" style="display:none;">
+            <img src="./web-app-test@2x.avif">
+        </div>
+        <div id="Organize" class="mySlides_2" style="display:none;">
+            <img src="./web-app-organize@2x.avif">
+        </div>
+        <div id="comment" class="mySlides_2" style="display:none;">
+            <img src="./web-app-comment@2x.avif">
+        </div>
+        <div id="inspect" class="mySlides_2" style="display:none;">
+            <img src="./web-app-inspect@2x.avif">
+        </div>
+        <div id="handoff" class="mySlides_2" style="display:none;">
+                <img src="./web-app-handoff@2x.avif">
+        </div>
+    </section>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot_2"></span> 
+      <span class="dot_2"></span> 
+      <span class="dot_2"></span>
+      <span class="dot_2"></span>
+      <span class="dot_2"></span>
+      <span class="dot_2"></span>
+      
+    </div>
+        <script>
+  let slideIndex7 = 0;
+showSlides7();
+function showSlides7(){
+  let i;
+  let slides_2 = document.getElementsByClassName("mySlides_2");
+  let dots_2 = document.getElementsByClassName("dot_2");
+  let dots6 = document.getElementsByClassName("dot_6");
+  for (i = 0; i < slides_2.length; i++) {
+    slides_2[i].style.display = "none"; 
+  }
+  slideIndex7++;
+  if (slideIndex7 > slides_2.length) {slideIndex7 = 1}    
+  for (i = 0; i < dots_2.length; i++) {
+    dots_2[i].className = dots_2[i].className.replace(" active6", "");
+    dots6[i].className = dots6[i].className.replace(" active1", "");
+  }
+  slides_2[slideIndex7-1].style.display = "block";   
+  dots_2[slideIndex7-1].className += " active6";
+  dots6[slideIndex7-1].className += " active1";
+  setTimeout(showSlides7, 3000); // Change image every 3 seconds
+}
+    </script>
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     <script>
+     //click button to display the respective images(websites...btn)
+        function openNav(id){
+            $(".mySlides_2").html("");
+            if(id==view){
+                $(".mySlides_2").html(
+                    ' <img src="./web-app-view@2x.avif">'
+                );
+            }
+            else if (id==test){
+                $(".mySlides_2").html(
+                    '<img src="./web-app-test@2x.avif">'
+                );
+            }
+            else if (id==organize){
+                $(".mySlides_2").html(
+                    '<img src="./web-app-organize@2x.avif">'
+                );
+            }
+            else if (id==comment){
+                $(".mySlides_2").html(
+                    '<img src="./web-app-comment@2x.avif">'
+                );
+            }
+            else if (id==inspect){
+                $(".mySlides_2").html(
+                    ' <img src="./web-app-inspect@2x.avif">'
+                );
+            }
+            else if (id==handoff){
+                $(".mySlides_2").html(
+                    '<img src="./web-app-handoff@2x.avif">'
+                );
+            }
+        }
+      </script> -->
+    </body>
+    </html>

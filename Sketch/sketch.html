@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sketch.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>sketch</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">        
+        <a href="#"><img src="./logo_sketch.svg" class="logo_img"/></a>
+        <div class="dropdown">
+            <button class="dropbtn">Product</button>
+            <div class="dropdown-content">
+              <a href="#">Design</a>
+              <a href="#">Collaboration</a>
+              <a href="#">Prototyping</a>
+              <a href="#">Developer Handoff</a>
+              <a href="#">Extensions</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <button class="dropbtn">Learn</button>
+            <div class="dropdown-content">
+                <a href="#">Courses</a>
+                <a href="#">Sketch 101</a>
+                <a href="#">Sketch 102</a>
+              </div>
+          </div>
+          <a href="#">Apps</a>
+           <a href="#">Pricing</a>
+           <div class="dropdown">
+            <button class="dropbtn">Why sketch</button>
+            <div class="dropdown-content">
+                <a href="#">Switch to Sketch</a>
+                <a href="#">Sketch vs. Figma</a>
+                <a href="#">Sketch Vs Adobe XD</a>
+                <a href="#">Free for Education</a>
+              </div>
+          </div>
+        <div class="side"> 
+            <div class="top-right"></div> 
+            <div class="dropdown">
+                <button class="dropbtn">Support</button>
+                <div class="dropdown-content">
+                    <a href="#">Sketch Help</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Service Status</a>
+                  </div>
+              </div>
+              <a href="#">Sign In</a>  
+              <button type="start_free">Get started for free</button>     
+    </div>
+   </nav>     
+    </header>
+    <section class="first mt-50">
+        <div class="penguin ">
+            
+            <div class="penguin_span1 box" lang="dragThis"><span><i class="fa fa-image"></i> Penguin · by Ilya</span>
+            <img src="./knitting-penguin@2x.avif"></div>
+            <div class="box"><img src="./play@2x.avif" lang="dragThis"></div>
+            <div class="box"><img src="./casio-watch-face-4@2x.avif" class="mt-50" lang="dragThis"></div>
+        </div>
+        <div class="centcol">
+       
+        <div class="pitch" lang="dragThis">
+        <span class="pitch_span"><i class="fa fa-image"></i>The Pitch</span>
+        <h1 class="pitch_title">Sketch is where
+            great <em style="color:#ff7843;">design</em> happens.
+        </h1>
+        <p>A Mac app for designers to create, team up, prototype, and more.</p>
+        <p>A web app for everyone else to browse, give feedback, inspect, and handoff — in any browser.</p>
+        <p>A complete design platform, made by a sustainable indie company since<em style="color:#ff7843;"> 2010.</em></p>
+        <div class="first1">
+        <button type="submit" value="find out">Find out more</button> 
+        <a href="#">See what's new</a></div>
+    </div>
+    </div>
+    <div class="auro">
+        <img src="./rocket@2x (1).avif" style="width:200px;" lang="dragThis" class="rocket">
+        <div  lang="dragThis">
+        <span style=" color: #858585;"><i class="fa fa-image"></i>Aurora</span>
+        <img src="./aurora-wallpaper@2x.avif" style="width:200px;"></div>
+    </div>
+    </section>
+    <section class=" two first mt-50"><div>
+        <img src="./ivory@2x.avif" style="width:400px;" lang="dragThis">
+    </div>
+    <div>
+        <img src="./button@2x.avif" class="mt-50 dragBtn" lang="dragThis"><br><br>
+        <img src="./brush@2x.avif" lang="dragThis">
+    </div>
+    <div>
+        <img src="./ekhlas-website@2x.avif" style="width:500px;" lang="dragThis">
+    </div>
+    </section>
+    <div class="mac_vdo">
+        <video  autoplay muted loop lang="dragThis">
+            <source src="./mac-app.mov">
+            </video>
+            <div class="mac_div">
+                <h1>A Mac app you’ll love to design with</h1>
+                <p>With thoughtful features that make mundane tasks easy,
+                and an intuitive interface that won’t interrupt your flow, you’ll 
+                do amazing things with Sketch.</p>
+            </div>
+    </div>
+    <section>
+        <div class="tab">
+            <button class="btnclr" onclick='currentSlide1(1)'>Websites</button>
+            <button class="btnclr" onclick='currentSlide1(2)'>Prototyping</button>
+            <button class="btnclr" onclick='currentSlide1(3)'>Icons</button>
+            <button class="btnclr" onclick='currentSlide1(4)'>Feedback</button>
+            <button class="btnclr" onclick='currentSlide1(5)'>Apps</button>
+            <button class="btnclr" onclick='currentSlide1(6)'>Symbols</button>
+            <button class="btnclr" onclick='currentSlide1(7)'>Illustrations</button>
+            <button class="btnclr" onclick='currentSlide1(8)'>Design systems</button>
+          </div>
+    </section>
+    <section class="last">
+        <div class=" mySlides_1">
+            <img src="./mac-app-websites@2x.avif" class="firstimage">
+        </div>
+        <div class=" mySlides_1"   class="firstimage">
+            <img src="./mac-app-prototyping@2x.avif">
+        </div>
+        <div class=" mySlides_1" class="firstimage">
+            <img src="./mac-app-icons@2x.avif">
+        </div>
+        <div  class=" mySlides_1" class="firstimage">
+            <img src="./mac-app-feedback@2x.avif">
+        </div>
+        <div  class=" mySlides_1" class="firstimage" >
+            <img src="./mac-app-apps@2x.avif">
+        </div>
+        <div  class=" mySlides_1" class="firstimage">
+            <img src="./mac-app-symbols@2x.avif">
+        </div>
+        <div  class=" mySlides_1" class="firstimage">
+            <img src="./mac-app-illustrations@2x.avif">
+        </div>
+        <div  class=" mySlides_1"  class="firstimage">
+            <img src="./mac-app-design-systems@2x.avif">
+        </div>
+    </section>
+    <br>
+
+<div style="text-align:center">
+  <span class="dot_1" onclick='currentSlide2(1)'></span> 
+  <span class="dot_1" onclick='currentSlide2(2)'></span> 
+  <span class="dot_1" onclick='currentSlide2(3)'></span>
+  <span class="dot_1" onclick='currentSlide2(4)'></span>
+  <span class="dot_1" onclick='currentSlide2(5)'></span>
+  <span class="dot_1" onclick='currentSlide2(6)'></span>
+  <span class="dot_1" onclick='currentSlide2(7)'></span>
+  <span class="dot_1" onclick='currentSlide2(8)'></span> 
+</div>
+        <section class="mt-120 first1">
+            <div>
+            <div lang="dragThis"><span style="color:#858585;margin:0px 0px 0px 20px;">Artboard1</span>
+            <p class="shadow" style="margin-left: 20px;">All the tools to help you create — from early wireframes, 
+                to flexible design systems</p></div>
+                <div class="design_right">
+                <p><a class="dot" onclick='currentSlide5(1)'>Powerful vector editing</a></p>
+                <p><a class="dot" onclick='currentSlide5(2)'>Easy, intuitive prototyping</a></p>
+                <p><a class="dot" onclick='currentSlide5(3)'>Shared Libraries, styles and components</a></p>
+                <p><a class="dot" onclick='currentSlide5(4)'>Control over color profiles</a></p>
+                <p><a class="dot" onclick='currentSlide5(5)'>Variable and OpenType font support</a></p>
+                <p><a class="dot" onclick='currentSlide5(6)'>Reusable design templates</a></p>
+            </div>
+        </div>
+        <div class="slideshow-container">
+
+         <div class="mySlides"><img src="./feature-1@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides"><img src="./feature-2@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides"><img src="./feature-3@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides"><img src="./feature-4@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides"><img src="./feature-5@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides"><img src="./feature-6@2x.avif" style="width: 100%;"></div>
+        </div>
+        </section> 
+    <section class="mt-120 first1">
+        <div>
+            <div lang="dragThis"><span style="color:#858585;margin:0px 0px 0px 20px;">Artboard2</span>
+            <p class="shadow" style="margin-left: 20px;">Workflows that adapt to you — 
+                whether you’re working solo, starting small, or scaling up</p></div>
+                <div class="design_right">
+                <p><a class="dot1" onclick='currentSlide6(1)'>Solo design or real-time collaboration</a></p>
+                <p><a class="dot1" onclick='currentSlide6(2)'>Offline and local file support</a></p>
+                <p><a class="dot1" onclick='currentSlide6(3)'>Store and sync your work</a></p>
+                <p><a class="dot1" onclick='currentSlide6(4)'>Share feedback in the app</a></p>
+                <p><a class="dot1" onclick='currentSlide6(5)'>Distribute Design Systems</a></p>
+                <p><a class="dot1" onclick='currentSlide6(6)'>Powerful file organization</a></p>
+                <p><a class="dot1" onclick='currentSlide6(7)'>Open .fig files</a></p>
+            
+        </div>
+    </div>
+    <div class="slideshow-container1">
+     <div class="mySlides1"><img src="./feature-1@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-2@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-3@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-4@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-5@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-6@2x (1).avif" style="width: 100%;"></div>
+     <div class="mySlides1"><img src="./feature-7@2x (2).avif" style="width: 100%;"></div>
+    </div>
+    </section>
+    <section class="mt-120 first1">
+        <div>
+            <div lang="dragThis"><span style="color:#858585;margin:0px 0px 0px 20px;">Artboard3</span>
+            <p class="shadow" style="margin-left: 20px;">A powerful Native Mac app, 
+                that you can make your own
+            </p></div>
+            <div class="design_right">
+                <p><a class="dot2" onclick='currentSlide7(1)'>Customizable toolbars</a></p>
+                <p><a class="dot2" onclick='currentSlide7(2)'>Optimized for Apple Silicon</a></p>
+                <p><a class="dot2" onclick='currentSlide7(3)'>Work in windows or tabs</a></p>
+                <p><a class="dot2" onclick='currentSlide7(4)'>Drag and drop between apps</a></p>
+                <p><a class="dot2" onclick='currentSlide7(5)'>Customizable shortcuts</a></p>
+                <p><a class="dot2" onclick='currentSlide7(6)'>Super-fast performance</a></p>   
+        </div>
+    </div>
+    <div class="slideshow-container2">
+     <div class="mySlides2"><img src="./feature-1@2x (2).avif" style="width: 100%;"></div>
+     <div class="mySlides2"><img src="./feature-2@2x (2).avif" style="width: 100%;"></div>
+     <div class="mySlides2"><img src="./feature-3@2x (2).avif" style="width: 100%;"></div>
+     <div class="mySlides2"><img src="./feature-4@2x (2).avif" style="width: 100%;"></div>
+     <div class="mySlides2"><img src="./feature-5@2x (2).avif" style="width: 100%;"></div>
+     <div class="mySlides2"><img src="./feature-6@2x (2).avif" style="width: 100%;"></div>
+    </div>
+    </section>
+    <div>
+        <button type="submit" value="discover" id="discover_btn">Discover designing in sketch</button>    
+    </div>
+    <div class="border"></div>
+    <section>
+        <div class="mac_vdo">
+            <video  autoplay muted loop>
+                <source src="./web-app.mov"> 
+                </video>
+                <div class="mac_div">
+                    <h1>A web app for sharing, feedback and handoff</h1>
+                    <p>Bring people and projects together — in any web browser — 
+                        to replace back-and-forth pings, email attachments and endless revisions.</p>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div class="tab1">
+            <button class="btnclr1" onclick='currentSlide3(1)'>View</button>
+            <button class="btnclr1" onclick='currentSlide3(2)'>Test</button>
+            <button class="btnclr1" onclick='currentSlide3(3)'>Organize</button>
+            <button class="btnclr1" onclick='currentSlide3(4)'>Comment</button>
+            <button class="btnclr1" onclick='currentSlide3(5)'>Inspect</button>
+            <button class="btnclr1" onclick='currentSlide3(6)'>Handoff</button>
+          </div>
+    </section>
+    <section class="last">
+        <div class="mySlides_2">
+            <img src="./web-app-view@2x.avif">
+        </div>
+        <div class="mySlides_2" >
+            <img src="./web-app-test@2x.avif">
+        </div>
+        <div class="mySlides_2">
+            <img src="./web-app-organize@2x.avif">
+        </div>
+        <div class="mySlides_2">
+            <img src="./web-app-comment@2x.avif">
+        </div>
+        <div class="mySlides_2">
+            <img src="./web-app-inspect@2x.avif">
+        </div>
+        <div class="mySlides_2">
+                <img src="./web-app-handoff@2x.avif">
+        </div>
+    </section>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot_2" onclick='currentSlide4(1)'></span> 
+      <span class="dot_2" onclick='currentSlide4(2)'></span> 
+      <span class="dot_2" onclick='currentSlide4(3)'></span>
+      <span class="dot_2" onclick='currentSlide4(4)'></span>
+      <span class="dot_2" onclick='currentSlide4(5)'></span>
+      <span class="dot_2" onclick='currentSlide4(6)'></span>
+      
+    </div>
+        <section class="mt-120 first1">
+            <div>
+                <div lang="dragThis"><span style="color:#858585;margin:0px 0px 0px 20px;">Artboard4</span>
+                <p class="shadow" style="margin-left: 20px;">Browser-based tools, ready for 
+                    everyone to make the most of</p> </div>
+                <div class="design_right">
+                    <p><a class="dot3" onclick='currentSlide8(1)'>Store, sync and share documents</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(2)'>Add viewers for free</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(3)'>Document and project permissions</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(4)'>Easy Workspace admin</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(5)'>Distribute libraries, components and templates</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(6)'>Test prototypes in any browser</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(7)'>Developer handoff tools</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(8)'>Zero learning curve</a></p>
+                    <p><a class="dot3" onclick='currentSlide8(9)'>View, comment and handoff for free</a></p>   
+            </div>
+        </div>
+        <div class="slideshow-container3">
+         <div class="mySlides3"><img src="./feature-1@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-2@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-3@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-4@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-5@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-6@2x (3).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-7@2x (1).avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-8@2x.avif" style="width: 100%;"></div>
+         <div class="mySlides3"><img src="./feature-9@2x.avif" style="width: 100%;"></div>
+        </div>
+        </section>
+        <section class="card_3 mt-120">
+            
+            <div lang="dragThis"><span style="color:#b620e0;margin:0px;">Symbol/card</span>
+            <div class="shadow1">
+                <img src="./school-cap@2x.avif" style="width:100px;">
+                <h1>Courses & resources</h1>
+                <p>Kickstart your projects with our ready-made templates, or get up 
+                    to speed with our self-paced courses. All for free!</p>
+                    <a href="#">Sketch 101 (great for beginners)<i class="fa fa-arrow-right"></i></a><br>
+                    <a href="#">Sketch 102 (supercharge your designs)<i class="fa fa-arrow-right"></i></a><br>
+                    <a href="#">Free design templates<i class="fa fa-arrow-right"></i></a>
+            </div>
+            </div>
+            <div class="design_text shadow3">
+                <h1>New to design?</h1>
+                <p>Starting with Sketch is easier than you think.</p>
+            </div>
+            <div lang="dragThis"><span style="color:#b620e0;margin:0px;">Symbol/card</span>
+            <div class="shadow1">
+                <img src="./beyond-the-canvas@2x.avif" style="width:100px;">
+                <h1>Get inspired</h1>
+                <p>Our Beyond the Canvas blog and newsletter are perfect for getting additional inspiration — 
+                    in your browser or in your inbox.</p>
+                    <a href="#">Read our latest blog posts<i class="fa fa-arrow-right"></i></a><br>
+                    <a href="#">Subscribe to our newsletter<i class="fa fa-arrow-right"></i></a><br> 
+            </div>
+            </div>
+        </section>
+       <section class="mac_vdo head1">
+        <video width="150" height="150" autoplay muted loop>
+            <source src="./diamond.mov"> 
+            </video>
+            <h1>Start creating today</h1>
+            <span><em>for free!</em></span>
+            <p>Whether you’re new to Sketch or back to see what’s new, 
+                we’ll have you set up and ready to do your best work in minutes.</p>
+                <button type="submit" value="free" id="free_btn">Get started for free</button> 
+       </section>
+       <section class="social_links shadow2">
+<div><img src="./fb.svg"></div>
+<div><img src="./mit.svg"></div>
+<div><img src="./pok.svg"></div>
+<div><img src="./porche.svg"></div>
+<div><img src="./hcsc.svg"></div>
+<div><img src="./google.svg"></div>
+<div><img src="./xbox.svg"></div>
+<div><img src="./taxslayer.svg"></div>
+<div><img src="./moto.svg"></div>
+       </section>
+       <section class="b4_footer mt-120 border">
+        <div>
+            <p><b>Incredible design, right in your inbox</b></p>
+            <p>Subscribe to our Beyond the Canvas newsletter and get the latest design news, 
+                articles, resources and inspiration every month</p>
+        </div>
+        <div>
+            <input type="email" placeholder="Email address"/>
+           <input type="button" value="Try it out"/><br><br>
+           <input type="checkbox" for="agree"/><label>I agree to receive marketing emails from Sketch.</label>
+        </div>
+       </section>
+    <footer class="last_footer">
+        <div>
+            <ul class="foot_lists">
+           <li><b>Product</b></li>
+           <li><a href="">what’s new</a></li>
+           <li><a href="">Design</a></li>
+           <li><a href="">Collaboration</a></li>
+           <li><a href="">Prototyping</a></li>
+           <li><a href="">Developer Handoff</a></li>
+           <li><a href="">Apps</a></li>
+           <li><a href="">Extensions</a></li>
+           <li><a href="">Pricing</a></li>
+        </ul>
+        </div>
+        <div>
+            <ul class="foot_lists">
+                <li><b>Why Sketch</b></li>
+                <li><a href="">Switch to Sketch</a></li>
+                <li><a href="">Sketch vs. Figma</a></li>
+                <li><a href="">Sketch vs. Adobe XD</a></li>
+                <li><a href="">Free for Education</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="foot_lists">
+                <li><b>Learn</b></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Course: Sketch 101</a></li>
+                <li><a href="">Course: Sketch 102</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Forum & Events </a></li>
+                <li><a href="">Newsletter</a></li>
+                <li><a href="">Developer Platform</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="foot_lists">
+                <li><b>Support</b></li>
+                <li><a href="">Sketch Help</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Manage License</a></li>
+                <li><a href="">Service Status </a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="foot_lists">
+                <li><b>Company</b></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Terms & Policies</a></li>
+                <li><a href="">Cookie Preferences</a></li>
+            </ul>
+        </div>
+    </footer>
+    <section class="final">
+<div>
+    <a href="#"><img src="./logo_sketch.svg" class="logo_img"/></a>
+</div>
+<div>
+    © 2023 Sketch B.V.
+</div>
+<div class="last_socmedia">
+<a href="#"><img src="./twitter.svg" style="width:20px;"/></a>
+<a href="#"><img src="./insta.svg" style="width:20px;"/></a>
+<a href="#"><img src="./youtube.svg" style="width:20px;"/></a>
+</div>
+    </section>
+    
+    <script src="./sketchfinal.js"></script> 
+   
+          
+</body>
+</html>

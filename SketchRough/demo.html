@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sketch.css"/>
+    <title>Document sketch</title>
+</head>
+
+
+<body>
+    <section>
+        <div class="tab" id="myBtn">
+            <button class="tablinks link active1" onclick="openNav('websites')">Websites</button>
+            <button class="tablinks link" onclick="openNav('prototyping')">Prototyping</button>
+            <button class="tablinks link" onclick="openNav('icons')">Icons</button>
+            <button class="tablinks link" onclick="openNav('feedback')">Feedback</button>
+            <button class="tablinks link" onclick="openNav('apps')">Apps</button>
+            <button class="tablinks link" onclick="openNav('symbols')">Symbols</button>
+            <button class="tablinks link" onclick="openNav('illustrations')">Illustrations</button>
+            <button class="tablinks link" onclick="openNav('design')">Design systems</button>
+          </div>
+    </section>
+    <section class="last">
+        <div class="img_show" id="websites">
+            <img src="./mac-app-websites@2x.avif">
+        </div>
+        <div class="img_show" id="prototyping" style="display: none;">
+            <img src="./mac-app-prototyping@2x.avif">
+        </div>
+        <div id="icons" class="img_show" style="display: none;">
+            <img src="./mac-app-icons@2x.avif">
+        </div>
+        <div id="feedback" class="img_show" style="display: none;">
+            <img src="./mac-app-feedback@2x.avif">
+        </div>
+        <div id="apps" class="img_show" style="display: none;">
+            <img src="./mac-app-apps@2x.avif">
+        </div>
+        <div id="symbols" class="img_show" style="display: none;">
+            <img src="./mac-app-symbols@2x.avif">
+        </div>
+        <div id="illustrations" class="img_show" style="display: none;">
+            <img src="./mac-app-illustrations@2x.avif">
+        </div>
+        <div id="design" class="img_show" style="display: none;">
+            <img src="./mac-app-design-systems@2x.avif">
+        </div>
+    </section>     
+    <script>
+         //slide show images
+         let slideIndex = 0;
+            showSlides();
+    function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active2", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active2";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    //tab
+function openNav(fea) {
+var i;
+var x = document.getElementsByClassName("img_show");
+for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";  
+}
+document.getElementById(fea).style.display = "block";  
+}
+var head = document.getElementById("myBtn");
+var btns = head.getElementsByClassName("link");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function() {
+var current = document.getElementsByClassName("active1");
+current[0].className = current[0].className.replace(" active1", "");
+this.className += " active1";
+});
+}
+
+let slide1Index = 0;
+showSlides1();
+
+function showSlides1() {
+  let i;
+  let slides1 = document.getElementsByClassName("mySlides_1");
+  let dots1 = document.getElementsByClassName("dot_1");
+  for (i = 0; i < slides1.length; i++) {
+    slides1[i].style.display = "none";  
+  }
+  slide1Index++;
+  if (slide1Index > slides1.length) {slide1Index = 1}    
+  for (i = 0; i < dots1.length; i++) {
+    dots1[i].className = dots1[i].className.replace(" active", "");
+  }
+  slides1[slide1Index-1].style.display = "block";  
+  dots1[slide1Index-1].className += " active";
+  setTimeout(showSlides1, 2000); // Change image every 2 seconds
+}
+
+
+    </script>
+</body>
+</html>

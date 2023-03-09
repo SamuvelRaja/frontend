@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculate.css"/>
+    <title>Calculator1</title>
+</head>
+<body>
+    <!-- <h3>2<sup>3</sup></h3> -->
+<div class="outer">
+<div class="inner">
+    <div class="first">
+        <input type="text"  id="display1"/>
+        <input type="text"  id="display2"/>
+        <input type="text"  id="display3"/>
+        <button  id="clear" onclick="setNull(null)">C</button>
+    </div>
+    <div class="second">
+        <button id="1" class="btn_value" >1</button>
+        <button id="2" class="btn_value" >2</button>
+        <button id="3" class="btn_value" >3</button>
+        <button id="divide" class="btn_sym" >/</button>
+    </div>
+    <div class="second">
+        <button id="4" class="btn_value" >4</button>
+        <button id="5" class="btn_value" >5</button>
+        <button id="6" class="btn_value" >6</button>
+        <button id="multiply" class="btn_sym">*</button>
+    </div>
+    <div class="second">
+        <button id="7" class="btn_value" >7</button>
+        <button id="8" class="btn_value" >8</button>
+        <button id="9" class="btn_value" >9</button>
+        <button id="subtract" class="btn_sym">-</button> 
+    </div>
+    <div class="second">
+        <button id="zero" class="btn_value" >0</button>
+        <button id="dot"  class="btn_symobol" onclick="setSymbol('.')">.</button>
+        <button id="equalto" class="btn_symbol" onclick="setSymbol('.')">=</button>
+        <button id="addition" class="btn_sym">+</button> 
+    </div>
+
+</div>
+    </div>
+    <script>
+        //  var operations;
+        // function setSymbol(symbols)
+        // {
+           
+        //     switch(symbols) 
+        //     {
+        //          case '/':
+        //          operations =parseInt(document.getElementById("display1").value)/parseInt(document.getElementById("display2").value)
+        //             break;
+        //             case '*':
+        //          operations=parseInt(document.getElementById("display1").value)*parseInt(document.getElementById("display2").value)
+        //             break;
+        //             case '+':
+        //          operations=parseInt(document.getElementById("display1").value)+parseInt(document.getElementById("display2").value)
+        //             break;
+        //             case '-':
+        //          operations=parseInt(document.getElementById("display1").value)-parseInt(document.getElementById("display2").value)
+        //             break;
+                 
+        //     }
+        //     document.getElementById("display3").value=operations;
+
+        // }
+        function setNull(){
+            document.getElementById("display1").value= "";
+            document.getElementById("display2").value="";
+            document.getElementById("display3").value="";
+        }
+        //getting button values with number
+        console.log(document.querySelectorAll(".btn_value"));
+        var btnval=document.querySelectorAll(".btn_value");
+         //getting button values with symbols
+        console.log(document.querySelectorAll(".btn_sym"));
+        var btnsym=document.querySelectorAll(".btn_sym");
+
+ for(var i=0;i<btnval.length;i++){
+    document.querySelectorAll(".btn_value")[i].addEventListener("click",function()
+        {
+            console.log(this.innerHTML)
+            var values=parseInt(this.innerHTML);
+        if(document.getElementById("display1").value){
+            document.getElementById("display2").value= values;
+           
+        }
+        else{
+            document.getElementById("display1").value= values;
+        } 
+        
+        }
+       
+        );
+       
+        if(i<btnsym.length){
+           console.log(i)
+            document.querySelectorAll(".btn_sym")[i].addEventListener("click",function(){
+            console.log(this.innerHTML);
+            var operations;
+            var symbols=this.innerHTML;
+            console.log(symbols);
+            switch(symbols) 
+            {
+                 case '/':
+                 operations =parseInt(document.getElementById("display1").value)/parseInt(document.getElementById("display2").value)
+                    break;
+                    case '*':
+                 operations=parseInt(document.getElementById("display1").value)*parseInt(document.getElementById("display2").value)
+                    break;
+                    case '+':
+                 operations=parseInt(document.getElementById("display1").value)+parseInt(document.getElementById("display2").value)
+                    break;
+                    case '-':
+                 operations=parseInt(document.getElementById("display1").value)-parseInt(document.getElementById("display2").value)
+                  break;
+                 
+            }
+            document.getElementById("display3").value=operations;
+            }
+            );
+        }
+ }
+      
+        </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="square.css"/>
+    <title>Calculator sqaure</title>
+</head>
+<body>
+<div class="outer">
+<div class="inner">
+    <div class="first">
+        <input type="text"  id="display1"/>
+        <input type="text"  id="display2"/>
+        <input type="text"  id="display3"/>
+        <button  id="clear" onclick="setNull()">C</button>
+    </div>
+    <div class="second">
+        <button id="1" onclick="setValue(1)">1</button>
+        <button id="2" onclick="setValue(2)">2</button>
+        <button id="3" onclick="setValue(3)">3</button>
+        <button id="divide" onclick="setSymbol('/')">/</button>
+    </div>
+    <div class="second">
+        <button id="4" onclick="setValue(4)">4</button>
+        <button id="5" onclick="setValue(5)">5</button>
+        <button id="6" onclick="setValue(6)">6</button>
+        <button id="multiply" onclick="setSymbol('*')">*</button>
+    </div>
+    <div class="second">
+        <button id="7" onclick="setValue(7)">7</button>
+        <button id="8" onclick="setValue(8)">8</button>
+        <button id="9" onclick="setValue(9)">9</button>
+        <button id="subtract" onclick="setSymbol('-')">-</button> 
+    </div>
+    <div class="second">
+        <button id="zero" onclick="setValue(0)">0</button>
+        <button id="dot"  onclick="setSymbol('.')">.</button>
+        <button id="equalto" onclick="setEqualto()">=</button>
+        <button id="addition" onclick="setSymbol('+')">+</button> 
+    </div>
+
+</div>
+    </div>
+   
+         <script src="./square.js">      
+            </script>
+</body>
+</html>

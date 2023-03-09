@@ -1,0 +1,36 @@
+.outer{
+    width:50%;
+    margin:50px auto;
+    border:1px solid black;
+    transition: width 2s, height 2s, transform 2s;
+}
+.inner{
+    display: flex;
+    flex-direction: row;
+    background-image: url('cardbgimage.jpg');
+    gap:50px;
+}
+.outer:hover{
+    box-shadow: 10px 10px 5px 1px blueviolet;
+    transform: rotate(180deg);
+}
+.one{
+    margin-left: 20px;
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.one:hover{
+    text-shadow: 2px 2px black;
+}
+.two{
+    margin-left: 40px;
+}
+.two:hover{
+    background: linear-gradient(
+            to right, #f32170, #ff6b08,
+             #cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}

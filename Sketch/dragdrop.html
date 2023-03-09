@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+    <style>
+      [lang|=dragThis] {
+    position : relative;
+    cursor : move;
+}
+/* .dragthis{
+  position: relative;
+  cursor:move;
+} */
+
+body {
+    background-color:#CFFCFF;
+    font-family: sans-serif;
+    font-size: 16px;
+    color:#000;text-align:center;
+}
+
+.code {
+    font-family: Courier New, sans-serif;
+    font-weight: bold;
+    color:#ff0000;
+}
+
+p {
+    background-color:#00aa00;
+    color:#fff;
+}
+
+b {
+    background-color:#0000aa;
+    color:#fff;
+    padding: 10px;
+}
+
+i {
+    background-color:#aa0000;
+    color:#fff;
+    padding: 10px;
+}
+
+div {
+    color:#fff;
+}
+
+.position_absolute {
+    display: block;
+    position: absolute;
+    top: 290px;
+    left:20px;
+    height:60px;
+    width:200px;
+    background-color:#0000ff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.position_relative {
+    display: inline-block;
+    position: relative;
+    height:60px;
+    width:200px;
+    background-color:#ff0000;
+    text-align: center;
+    border-radius: 20px;
+}
+.position_fixed {
+    display: block;
+    position: fixed;
+    top: 380px;
+    left:20px;
+    height:60px;
+    width:200px;
+    background-color:#aaa000;
+    text-align: center;
+    border-radius: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <p style="background-color:#fff;color:#000;">
+      <h2>Straight JavaScript Drag and Drop<br></h2>
+      <!-- Works on any HTML element <span style="font-weight:bold;">without</span> having to alter or reference its CSS class name, style or id<br>&nbsp;<br>
+      Simply add <span class="code">[lang|=dragThis]{position: relative;cursor: move;}</span> to your style sheet then add <span class="code">lang="dragThis"</span> to any HTML tag<br>&nbsp;<br>
+      Example: <span class="code">&#60;img src="someImage.png" lang="dragThis"&#62;</span> or <span class="code">&#60;div id="someDiv" class="someClass" lang="dragThis"&#62;&#60;/div&#62;</span><br>&nbsp;<br>
+      All CSS position types accepted except <span style="font-weight:bold;">sticky</span>. This position type has been excluded!</p>&nbsp;<br> -->
+      <p style="width:300px;padding: 10px;" lang="dragThis">&#60;p&#62; tag</p><b lang="dragThis">&#60;b&#62; tag</b>
+      <i lang="dragThis">&#60;i&#62; tag</i>
+      <div lang="dragThis" class="position_relative">&#60;div&#62;<br>position relative/none</div>
+      <textarea rows="6" lang="dragThis" id="msg" name="msg" value="">&#60;textarea&#62; This is just an example but will have to be put inside another draggable element to become usable</textarea>
+      <img src="./button@2x.avif" lang="dragThis" style="vertical-align:middle"><br>
+      <img src="./brush@2x (1).avif" lang="dragThis" style="position:absolute;top:290px;left:250px;">
+      <div lang="dragThis" class="position_absolute">&#60;div&#62;<br>position absolute </div>
+      <div lang="dragThis" class="position_fixed">&#60;div&#62;<br>position fixed </div>
+      <div style="display:block;position:absolute;top:0px;left:0px;height:2000px;width:1px;background-color:transparent;"></div>
+      <script>
+        (function() {
+
+/* Drag & Drop Any Element - Kurt Grigg
+
+Add this to your CSS style sheet:
+    [lang|=dragThis] {position: relative;cursor: move;}
+
+Add this to any element you want to drag:
+    lang="dragThis"
+    
+    example: <img src="someImage.png" lang="dragThis">
+*/
+
+    var y,x,el,dy = 0,dx = 0,ok = false,z = 1000,d = document;
+
+    function down(e) {
+        var tx,ty;
+        if (!e) {e = window.event;}
+        el = (typeof e.target != "undefined")?e.target:e.srcElement;
+        if (el.tagName != "HTML"|"BODY" && el.lang != "dragThis") {
+            el = (typeof el.parentNode != "undefined")?el.parentNode:el.parentElement;
+        }
+        if (el.lang == "dragThis") {
+            el.style.opacity = '0.8';
+            var a =  el.getBoundingClientRect();
+            var bx = a.left,
+            by = a.top;
+            var posType = window.getComputedStyle(el,null).getPropertyValue("position");
+            if (posType == 'relative') {
+                tx = 0;
+                ty = 0;
+            }
+            if (posType == 'absolute') {
+                tx = bx + window.pageXOffset;
+                ty = by + window.pageYOffset;
+            }
+            if (posType == 'fixed') {
+                tx = bx;
+                ty = by;
+            }
+            e.preventDefault();
+            ok = true;
+            el.style.zIndex = z++;
+            dx = parseInt(el.style.left + tx, 10);
+            dy = parseInt(el.style.top + ty, 10);
+            x = e.clientX;
+            y = e.clientY;
+        }
+    }
+
+    function move(e) {
+        if (!e) {e = window.event;}
+        if (ok) {
+            el.style.left = dx + e.clientX - x + "px";
+            el.style.top  = dy + e.clientY - y + "px";
+        }
+    }
+
+    function up() {
+        ok = false;
+        el.style.opacity = '1';
+    }
+
+    d.addEventListener('mousedown', down, false);
+    d.addEventListener('mousemove', move, false);
+    d.addEventListener('mouseup', up, false);
+
+
+})();
+      </script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Function</title>
+    <style>
+       .focus:focus {
+      background-color: pink;
+      }
+      /* .btnHover:hover{
+    background-color: red;
+    } */
+    </style>
+</head>
+<body>
+   
+    <button onclick="myFunction1()" class="focus btnHover" >Click1</button>
+    
+    <button onclick="myFunction2()" class="focus btnHover" >Click2</button>
+   
+    <button onclick="myFunction3()" class="focus btnHover" >Click3</button>
+    
+    <button onclick="myFunction4()"  class="focus btnHover">Click4</button>
+ <p id="demo1"></p>
+    
+    <script>
+        function myFunction1(){
+            document.getElementById("demo1").innerHTML = "Hello World1";
+        }
+        function myFunction2(){
+            document.getElementById("demo1").innerHTML = "Hello World2";
+        }
+        function myFunction3(){
+            document.getElementById("demo1").innerHTML = "Hello World3";
+        }
+        function myFunction4(){
+            document.getElementById("demo1").innerHTML = "Hello World4";
+        }
+
+    </script>
+</body>
+</html>

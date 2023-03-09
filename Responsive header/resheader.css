@@ -1,0 +1,97 @@
+/* Desktop design */
+@import "https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Public Sans", "Trebuchet MS", sans-serif !important;
+}
+.desk_logo{
+  margin-left: 16px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+   .nav_link {
+    display: block;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+
+  .nav_link a {
+    display: inline-block;
+    padding: 10px
+  }
+  .closebtn{
+    display: none;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: black;
+  }  
+  .nav_link{
+    display: none;
+  }
+  /* Mobile design media queries */
+/*   
+   @media screen and (max-width: 580px) {
+    .nav_link {
+        position: fixed;
+        width: 80%;
+        top: 60px;
+        left: 0px;
+        background-color: aliceblue; 
+      }
+      .nav_link a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+      }
+      .hide,.hide_access,.hide_sign {
+        display: none;
+      } 
+      .hide_sign1{
+        visibility: visible;
+        display: block;
+        padding-right: 16px;
+      }
+      .hamburger {
+        visibility: visible;
+        display: block;
+        position: absolute;
+        margin: 24px;
+        margin-top: -12px;
+        margin-left: 20px;
+        padding-top: 48px;
+        padding-right: 20px;
+       
+      }
+      .mob_logo{
+        visibility: visible;
+        display: block;
+       margin-left: 165px;
+       height:34px;
+      }
+      .desk_logo{
+        display: none;
+      }
+      .nav{
+        width:100%;
+      }
+  }  */

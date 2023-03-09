@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="features.css"/>
+    <title>Featureshead</title>
+    <style>
+header{
+     width:100%;
+    position: fixed;
+}
+.first{
+    background: url('./img/Feature_BG.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+  }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+  }
+  .nav.solid{
+    background-color: #fff;
+    
+}
+  .nav_link a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color:#000;
+  }
+    </style>
+</head>
+<body>
+    <section class="first">
+    <header  id="site-header-inner">
+        <nav class="nav">
+          <a href="/" class="logo">
+              <img src="./img/header_logo.svg" class="desk_logo"/>
+              
+          </a>
+          <!-- <div class="hamburger" onclick="openNav()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <img src="./img/mobile-logo.svg" class="mob_logo"/>
+          </div> -->
+          <div class="nav_link">
+          <a href="#">Home</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#careers">Careers</a>
+          <a href="#access" class="hide-dt"><span class="hide-access">Have Access Already?</span>
+            <b class ="hide-sign">Sign in</b></a>
+          </div>
+        </nav>
+      </header>
+    
+     <div class="logo_below">
+        <h1>Tools to build, Tools to Sell</h1>
+        <p>Explore what makes us different. We focus on building Tools for you, 
+            so that you can focus on your Business</p>
+        <button type="submit" value="Join the Waitlist" class="btn_top">Join the Waitlist</button>
+      </div>
+    </section>
+    <section class="second pt-40 txt_cent">
+        <div class="list_links" id="myBtn">
+            <button type="feanav" onclick="openNav('dashboard')" class="link active">Dashboard</button>
+            <button type="feanav" onclick="openNav('orders')" class="link">Your Orders</button>
+            <button type="feanav" onclick="openNav('marketing')" class="link">Marketing</button>
+            <button type="feanav" onclick="openNav('growth')" class="link">Growth</button>
+        </div>
+        </section>
+        <section id="dashboard" class="featureslink">
+            <section class="response1">
+            <h1 class="head mt-100">Feature Loaded Dashboard</h1>
+            <p class="para">Explore what makes us Different We focus on building Tools for you, 
+                so that you can focus on your Business</p>
+                <img src="./img/Group_402.webp" class="mob_img"/>
+                </section>
+                <section class="response1">
+                <h1 class="head mt-100">Manage Products</h1>
+                <p class="para">Explore what makes us Different We focus on building Tools for you, 
+                    so that you can focus on your Business</p>
+                <img src="./img/Group_403.webp" class="mob_img"/>
+                
+                <ul class="bullet_list mt-64">
+                    <li><img src="./img/arrow.svg"/>
+                    <span>Describe it: Product Name, short description or tag line</span>
+                    </li>
+                    <li><img src="./img/arrow.svg"/>
+                    <span>Ready for Sale: Add Pricing & stock quantity</span>
+                    </li>
+                    <li><img src="./img/arrow.svg"/>  
+                    <span>Click to Publish</span>
+                    </li>
+                </ul>
+              </section>
+        
+        <section class="shirt_flex mt-100">
+            <div class="product_1">
+                <img src="./img/Group_156.webp" class="mob_img_156 mt-64"/>
+                <div class="pro_1">
+                    <h1>Customize your Products</h1>
+                    <p>Ask your customers: What is that extra personal touch they would love?</p>
+                </div>
+            </div>
+            <div class="product_2">
+                <img src="./img/Group_416.webp" class="mob_img mt-64"/>
+                <div class="pro_2 ">
+                    <h1>Variations to your products</h1>
+                    <p>Give variants to your customers e.g., Size, color, materials, etc, 
+                        Even price them accordingly.</p>
+                </div>
+            </div>
+        </section>
+      </section>
+      <section id="orders" class="featureslink" style="display: none;">
+        <section class="response1">
+          <h1 class="head mt-100">Instant Order Views</h1>
+          <p class="para">One glance is all it takes. 
+              Grok your order pipeline totally, including payment status, sales report, & progress of each order.</p>
+              <img src="./img/Group_374.webp" class="mob_img mt-64"/>
+              </section>
+              <section class="response1">
+              <h1 class="head mt-100">Automated sales & Tax reports</h1>
+              <p class="para">We make it fun to see sales reports, and remove the grunge from tax reports - 
+                  fully automated. Get out of the boiler room and get back to your business faster. 
+              </p>
+              <img src="./img/Group_373.webp" class="mob_img"/>
+            </section>
+            <section class="response1">
+              <h3 class="head mb-0" style="font-size: 16px;">Invoice Generation</h3>
+              <p class="para">Customers will receive an automated invoice to their mail address whenever they place an order</p>
+            </section>
+      
+      <section class=" response1">
+       <h1 class="head mt-128">Own your Customers</h1>
+       <p class="para">You are our customer, and your customers are your customers. 
+      Create an unlimited target database to segment and run campaigns to build loyal customers.</p>
+      <img src="./img/Group_401.webp" class="mob_img mt-64"/>
+      </section>
+      <section class="response1">
+          <h1 class="head mt-128">Payment Gateways</h1>
+          <p class="para">Choose your preferred safe & secure payment options to receive your payments.</p>
+          <div class="payments">
+          <img src="./img/Group_379.webp" class="mob_payimg mt-64"/>
+          <img src="./img/Group_380.webp" class="mob_payimg mt-64"/>
+          <img src="./img/Group_381.webp" class="mob_payimg mt-64"/>
+          <img src="./img/Group_382.webp" class="mob_payimg mt-64"/>
+          </div>
+      </section>
+    </section>
+    <section id="marketing" class="featureslink" style="display: none;">
+      <section class="response1">
+        <h1 class="head mt-128">Digital marketing tools</h1>
+        <p class="para">It’s super easy now with well integrated Facebook pixels, 
+          Google Analytics & Google tags to analyze & get insights about your audience demographics, 
+          behaviour and traffic sources</p>
+          <div class="payments">
+            <img src="./img/Group_237.webp" class="mt-64 mob_payimg"/>
+            <img src="./img/Group_238.webp" class="mt-64 mob_payimg"/>
+            <img src="./img/Group_368.webp" class="mt-64 mob_payimg"/>
+        </div>
+      </section>
+      <div class="market_opt response1">
+        <div>
+          <h2 class="head2 mt-128">Search Engine Optimization</h2>
+          <p class="para1">It’s a geeky art to optimize keywords and we manage this to ensure 
+            that people find your business in Search Engine</p>
+            <h2 class="bonus">Bonus/Advance SEO</h2>
+            <p class="para1 bonus_para">In addition, we are providing dynamic robot.txt files & sitemap.xml 
+              which are used by search engines to discover and index your e-Commerce website even faster.</p>
+              <div class="star">
+              <img src="./img/more_feature_star.svg"/><h3>More Features coming soon!</h3>
+            </div>
+        </div>
+        <div class="mt-200 mt-64-md">
+          <img src="./img/Search_Engine_Optimization.webp" class="search_img"/>
+        </div>
+      </div>
+      <section class="response1">
+        <h1 class="head">Offer and Discount Coupons</h1>
+        <p class="para">Create & Use special offers or discount coupons effectively in the festival season or 
+          special occasions to drive sales & traffic to your e-Commerce store.</p>
+          <img src="./img/discount.webp" class="mt-64"/>
+      </section>
+    </section>
+    <section id="growth" class="featureslink" style="display: none;">
+      <section class="response1">
+      <h1 class="head">Custom Domain Integration in one click</h1>
+      <p class="para">Connect your Custom domain you already own with Zemuria.</p>
+      <img src="./img/domain.webp" class="mt-64 domain_mbimg" />
+      <div class="domain_box">
+        <h5>Why Custom Domain is important?</h5>
+        <ul class="domain_ul mt-64">
+          <li>Easy Discoverability & Recognizable</li>
+          <li>SEO friendly - Can Rank in Google SERP faster</li>
+          <li>Builds Brand Credibility</li>
+        </ul>
+      </div>
+      <img src="./img/carbon_ibm.webp" class="mt-64"/>
+      <h2>One Stop Hosting</h2>
+      <p class="domain_p ">Reliable and fast web hosting solution to power your Online business website</p>
+      <img src="./img/Group_240.webp" class="mt-64"/>
+      <h2>Free Sub Domain</h2>
+      <p class="domain_p ">New to ecommerce business? Get our free subdomain and start selling online immediately. 
+        Or map your own domain.</p>
+        <img src="./img/Group_176.webp" class="mt-64"/>
+        <h2>Free SSL</h2>
+        <p class="domain_p ">Protect & secure your e-commerce store with a Free SSL certificate</p>
+        <img src="./img/bi_coin.webp" class="mt-64"/>
+        <h2>Zero commissions</h2>
+        <p class="domain_p ">Everything you make here* in Zemuria is yours</p>
+       <p> <i style="font-size: 12px;">*Transaction fees of Payment gateways are independent*</i></p>
+      </section>
+
+    </section>
+        <section>
+            <div class="qns mt-128">
+                <h1>Still having questions?</h1>
+                <p>Check out the FAQs below to understand more!</p>
+            </div>
+        </section>
+        
+        <section>
+            <div class="bgimg mt-100">
+            <div class="outer mt-100">
+              <div class="inner">
+      <h1>Excited to try out?</h1>
+      <p>Onboarding is on a scheduled rolling basis and is highly selective</p>
+      <form>
+      <div class="grid_2">
+        <div class="formcontent">
+      <label  for="name" required>Name</label>
+      <input type="text" id="name" placeholder="Enter your Name"/>
+      </div>
+      <div class="formcontent" required>
+        <label>Email</label>
+      <input type="email" placeholder="Enter your Email"/>
+      </div>
+      </div>
+      <div class="grid_3">
+      <div class=" formcontent">
+      <label>Phone Number</label>
+      <input type="number" placeholder="Enter your Number"/>
+      </div>
+      <div class=" formcontent">
+      <label for="countryname">Country</label>
+      <select id="countryname" name="countryname">
+        <option value="">United States </option>
+        <option value="1">Thailand</option>
+        <option value="2">Switzerland</option>
+        <option value="3">Syria</option>
+        <option value="4">Turkey</option>
+      </select>
+      </div>
+      <div class=" formcontent">
+        <label for="product">Type of Product</label>
+        <select id="product" name="product">
+          <option value="">Physical Product </option>
+          <option value="1">Digital Product</option>
+          <option value="2">Both</option>
+        </select>
+      </div>
+      </div>
+      <div class="new">
+        <input type="checkbox"/>
+        <label>I accept Zemuria’s <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a></label>
+      </div>
+      <button type="count1" value="Join The Waitlist" style="margin-top: 15px;">Join The Waitlist</button>
+      </div>
+      </form>
+      </div>
+            </div>
+        </div>
+          </section>
+                  
+            <footer>
+              <section class="foot_flex"> 
+            <div class="foot_flex1">
+              
+              <a href="#"><img src="./img/Landing_page_footer_logo.svg"/></a>
+              <p style="color:#fff;">Zemuria is the smartest & easiest way to start your online business journey.
+            We help small businesses, 
+            creators, DTCs, MSMEs, & startups to create & launch their eCommerce websites to sell online.</p>
+           <div class="foot_flex icon_mob"> <a href="#"><img src="./img/twitter.svg" style="width:24px; height:24px;"/></a>
+            <a href="#"><img src="./img/Vector-insta.svg" style="width:24px; height:24px;"/></a></div>
+            </div>
+            
+            <div class="lead">
+            <div class="foot_flex2 lead">
+               <h4>Quick Links</h4>
+               <a href="#">Home</a>
+               <a href="#">Features</a>
+               <a href="#">FAQ's</a>
+               </div>
+             
+            <div class=" foot_flex3 lead">
+              <h4>Company</h4>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+            <div class="foot_flex4">
+                <h4>Contact</h4>
+                <a href="#">support@zemuria.com</a>
+            </div>
+          
+          </section>
+          <div class="last">
+            <a style=" color:#fff;"> Copyright © Designed & Developed by Zemuria Inc. 2023</p>
+          </div>
+         </footer>
+     <script>
+    let site = document.getElementById('site-header-inner');
+
+document.addEventListener('scroll', function() {
+  
+  // Get the scroll position
+  let scrollPos = window.pageYOffset;
+  
+  if ( scrollPos > 100 ) {
+    site.style.backgroundColor = "white";
+  } else {
+    site.style.backgroundColor = "";
+  }
+  
+  
+});
+//button navigation
+function openNav(fea) {
+            var i;
+            var x = document.getElementsByClassName("featureslink");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            document.getElementById(fea).style.display = "block";  
+          }
+
+          // Add active class to the current button (highlight it)
+          var header = document.getElementById("myBtn");
+          var btns = header.getElementsByClassName("link");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+          }
+     </script>
+          </body>
+          </html>
