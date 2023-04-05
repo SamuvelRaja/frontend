@@ -11,6 +11,7 @@ let command = elem.dataset ["element"];
  }
  
  else {
+   
     document.execCommand(command,false,null);
  }
     });
