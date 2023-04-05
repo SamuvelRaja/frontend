@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>New blog</title>
+    <style>
+        p::selection{
+                background-color: blanchedalmond;
+            }
+        #reply-icon{
+            display: none;
+            position: absolute;
+            } 
+    </style>
+</head>
+<body>
+    <h1>Blog Replies</h1>
+    <p class="selectable-text">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+        used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+        Lorem ipsum may be used as a placeholder before final copy is available.
+    </p>
+    <p class="selectable-text">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+        used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+        Lorem ipsum may be used as a placeholder before final copy is available.
+    </p>
+    <p class="selectable-text">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+        used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+        Lorem ipsum may be used as a placeholder before final copy is available.
+    </p>
+    <form name="testform" id="myForm">
+    <textarea rows="5" cols="20" id="textarea_show"  name="selectedtext" style="display: none;">
+
+    </textarea>
+    <button type="submit" id="submit_show" style="display: none;">Submit</button>
+    </form>
+    <p class="select_textshow" id="select"></p>
+    <p class="comment_textshow" id="comment1"></p>
+  <div id="reply-icon"><i class="fas fa-long-arrow-right" onclick="selectabletextareaMouseUp()"></i></div>
+  <script src="./newblog.js"></script>
+</body>
+</html>

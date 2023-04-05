@@ -8,7 +8,6 @@
     }
     document.getElementById(fea).style.display = "block";  
   }
-
   // Add active class to the current button (change the btn highlight it)
   var header = document.getElementById("myBtn");
   var btns = header.getElementsByClassName("link");

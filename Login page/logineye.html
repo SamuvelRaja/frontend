@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logineye.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <title>Eye Login</title>
+</head>
+<body>
+    <div class="outerdiv">
+    <div id="face">
+        <div class="left eye">
+            <div class="pupil"></div>
+        </div>
+        <div class="right eye">
+            <div class="pupil1"></div>
+        </div>
+        <img src="./pngimg.com - sunglasses_PNG142.png" style="width:250px;" class="glass_img showGlass"> 
+        <div id="mouth"></div>
+    </div>
+    <form class="innerdiv">
+        <label for="fname" >First name:</label>
+        <input type="text" id="fname" name="fname" class="username" onclick="movefName()">
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" onclick="movelName()">
+        <label for="pass" >Password:</label>
+      <div><input type="password" id="passInput" class="passwordInput" onclick="passValue()">
+        <i class="fa-solid fa-eye-slash" id="togglePassword" onclick="showPassword()"></i></div>
+        
+      <!-- <div> <input type="checkbox" onclick="showPassword()">show Password</div>  -->
+        <button  class="inner_lab login">Login</button>
+      </form>
+    </div>
+    <script src="./logineye.js"></script>
+</body>
+</html>

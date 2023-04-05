@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Old text:</p>
+<textarea id="originalText" rows=6 cols=60></textarea>
+<br> -->
+<input id="typo" placeholder="typo" type="text">
+<input id="correctWord" placeholder="correct word" type="text">
+<button id="replace">Replace</button>
+<br>
+<p>New text:</p>
+<textarea  id="originalText" rows=12 cols=60></textarea>
+<script>
+    document.getElementById("replace").onclick = function() {
+  var bad = document.getElementById("typo").value;
+  var good = document.getElementById("correctWord").value;
+  var content = document.getElementById("originalText").value;
+  var b = new RegExp(bad, "g"); // replace globally
+  document.getElementById("originalText").value = content.replace(b, good);
+}
+</script>
+    
+</body>
+</html>

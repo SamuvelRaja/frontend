@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./editor.css">
+    <title>Blog Editor</title>
+
+</head>
+<body>
+    <div class="edit mybtns">
+        <div class="select-container">
+            <div class="select" >
+                <input type="text" id="input" placeholder="Normal" >
+            </div>
+            <div class="option-container">
+                <div class="option">
+                    <label style="font-size: 40px;"> Heading1 </label>
+                </div>
+                <div class="option">
+                    <label style="font-size: 36px;">Heading2</label>
+                </div>
+                <div class="option">
+                    <label style="font-size: 32px;">Heading3</label>
+                </div>
+                <div class="option">
+                    <label style="font-size: 28px;">Heading4</label>
+                </div>
+                <div class="option">
+                    <label style="font-size: 24px;">Heading5</label>
+                </div>
+                <div class="option">
+                    <label style="font-size: 20px;">Heading6</label>
+                </div>
+            </div>
+        </div>
+        <!-- <select>
+            <option>Heading1</option>
+            <option>Heading2</option>
+            <option>Heading3</option>
+            <option>Heading4</option>
+            <option>Heading5</option>
+            <option>Heading6</option>
+        </select> -->
+        
+        <select>
+            <option>12</option>
+            <option>14</option>
+            <option>16</option>
+            <option>18</option>
+            <option>20</option>
+        </select>
+       <button onclick="txtbold()" class="btn"><img src="./Bold.svg"></button>
+       <button onclick="txtitalics()"class="btn" ><img src="./Italics.svg"></button>
+       <button onclick="txtunderline()" class="btn"><img src="./underlined.svg"></button>
+       <button onclick="txtstrike()"><img src="./Strikeout.svg"></button>
+       <button data-element="insertUnorderedList" class="btns"><img src="./bullets.svg"></button>
+       <button data-element="insertOrderedList" class="btns"><img src="./Numbers.svg"></button>
+       <button onclick="txtsub()"><img src="./Subscript.svg"></button>
+       <button onclick="txtsup()"><img src="./Superscript.svg"></button>
+       <button onclick="txtcenter()"><img src="./Group 458.svg"></button>
+       <button onclick="txtright()"><img src="./Right align.svg"></button>
+       <button onclick="txtleft()"><img src="./Left align.svg"></button>
+       <button><img src="./Justify.svg"></button>
+       <button><img src="./Indent Right.svg"></button>
+       <button><img src="./Indent left.svg"></button>
+       <button><img src="./Add link.svg"></button>
+       <button><img src="./Disconnect link.svg"></button>
+       <button><img src="./Search.svg"></button>
+       <button><img src="./Find and Replace.svg"></button>
+       <button><img src="./Remove  S.svg"></button>
+       <button><img src="./Find and Replace.svg"></button>
+       <button><img src="./Code.svg"></button>
+       <button><img src="./Source Code.svg"></button>
+       <button><img src="./Subscriptline.svg"></button>
+       <button><img src="./Add Image.svg"></button>
+       <button><img src="./Table.svg"></button>
+       <button><img src="./text Color.svg"></button>
+       <button><img src="./Highlight.svg"></button>
+       <button><img src="./Undo.svg"></button>
+       <button><img src="./Redo.svg"></button>
+       <button><img src="./Quote.svg"></button>
+    </div>
+    <div role="textbox" contenteditable="true" aria-multiline="true" class="editorbox" id="editbox"></div>
+<script src="./editor.js"> </script>
+    
+</body>
+</html>

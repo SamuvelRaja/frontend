@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'hmpg_img/Favicon.png' %}" />
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'superuser/admin_internal.css' %}">
+    <link rel="stylesheet" type='text/css' media='screen' href="{% static 'blogs/cms.css' %}">
+    <script type="text/javascript" src="{% static 'zemeditor/zemeditor/zemeditor.js' %}"></script>
+    <script type="text/javascript" src="{% static 'zemeditor/zemeditor-init.js' %}"></script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper" style="position: unset;">
+        {% include 'superuser/navbar.html' %}
+
+             <div class="cms-head">
+                <h1>Blog Editor</h1>
+            </div>
+        <div class="content-wrapper zem-write">
+            
+            <form action="" method="post" class="d-flex">
+                <div class="zem-write-left">
+                    <div class="zem-write-title d-flex flex-column">
+                        <input type="text" placeholder="Title..." name="blog-title" class="zem-title-input">
+                        <textarea cols="2"
+                        placeholder="Description: Enter Your Description Here. The data uploaded here will also be added to the meta description of the blog page. Will also be added to OG description."
+                        name="blog-description" 
+                        class="zem-desc-input"></textarea>
+                    </div>
+                    <div class="zem-write-tags d-flex align-center">
+                        <div class="zem-category">
+                            <a href="#category-modal" class="zem-tags">Choose category</a>
+                        </div>
+                        <div class="zem-author d-flex align-center">
+                            <span class="zem-tags">author</span>
+                            
+                        </div>
+                        <a href="#author-modal" class="btn">+</a>
+                    </div>
+                        {{content_form}}
+                    
+                    
+                    
+                </div>
+                <div class="zem-write-right">
+                    
+                    <div class="zem-add-meta d-flex">
+                        <a href="#og-modal" class="text-dec-none og-img-add btn mr-8">+OG image</a>
+                        <a href="#meta-modal" class="text-dec-none og-img-add btn mr-8"> + Meta Tags</a>
+                    </div>
+                    <div class="zem-thumbnail-div mt-16">
+                        <h3 class="mt-0 mb-8">Thumbnail</h3>
+                        <div class="zem-imgprev d-flex flex-column align-center justify-center">
+                            <div class="single-img-box d-none"><span class="upload-close">x</span></div>
+                            <img   src="{% static 'blogs/images/imgrep.svg' %}" width="22px" height="17px" alt="">
+                            <p class="mt-4">Image Size: 1920*1080</p>
+                            <input type="file" class="upload__inputfile" name="" id="" style="opacity: 0;">
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="zem-submit-div">
+                        <div>
+                            <button class="btn-outline btn"> Save as Draft</button>
+                            <button class="btn link-btn">Publish</button>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- modals -->
+                    <div id="og-modal" class="modal">
+                        <div class="modal__content modal_md">
+                            <form action="">
+                                <div class="container d-flex flex-column">
+                                    <label for="" class="mb-8">Upload OG Image</label>
+                                    <div class="zem-imgprev d-flex flex-column align-center justify-center mb-28">
+                                        <div class="single-img-box d-none"><span class="upload-close">x</span></div>
+                                        <img   src="{% static 'blogs/images/imgrep.svg' %}" width="22px" height="17px" alt="">
+                                        <p class="mt-4">Image Size: 1200 * 630</p>
+                                        <input type="file" class="upload__inputfile" name="" id="" style="opacity: 0;">
+                                    </div>
+                                    <label for="">Title</label>
+                                    <input type="text" placeholder="Enter the title" class="input_pd" name="" id="">
+
+                                    <label for="">Alt Text</label>
+                                    <input type="text" placeholder="Enter the alt text" class="input_pd" name="" id="">
+                                    <div>
+                                        <div class="float-right flex_24">
+                                            <button class="close_btn modal__close"><a href="#" class="modal__close">Close</a></button>
+                                            <button class="add_btn">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            <a href="#" class="modal__close close_icon">×</a>
+                        </div>
+                    </div>
+                    <!-- meta modal -->
+                    <div id="meta-modal" class="modal">
+                        <div class="modal__content">
+                            <form action="">
+                                <div class="container d-flex flex-column">
+                                <label for="" class="mb-8">Meta Title</label>
+                                <input type="text" placeholder="Enter  title" class="input_pd" name="" id="">
+                               <label for="">Meta Description</label>
+                              <input type="text" placeholder="Enter the title" class="input_pd" name="" id="">
+                                <label for="">Slug</label>
+                                <input type="text" placeholder="" class="input_pd" name="" id="">
+                              <label for="">Canonical Link</label>
+                              <input type="text" placeholder="Enter the alt text" class="input_pd" name="" id="">
+                               <div>
+                                <div class="float-right flex_24">
+                                    <button class="close_btn modal__close"><a href="#" class="modal__close">Close</a></button>
+                                    <button class="add_btn">Add</button>
+                                </div>
+                                </div>
+                                </div>
+                            </form>
+                            <a href="#" class="modal__close close_icon">×</a>
+                        </div>
+                    </div>
+                    <!-- author modal -->
+                     <div id="author-modal" data-count="0" class="modal">
+                        <div class="modal__content">
+                            <form action="">
+                                <div class="container d-flex flex-column">
+                                    <p id="author-alert" style="display: none;"><img height="16px" width="16px" src="{% static 'blogs/images/alert.svg' %}" alt=""> Only 5 authors can be selected</p>
+                                <label>Add Authors</label>
+                                <div class="author-check-div d-flex flex-column mt-16 mb-28">
+                                    {% for author in authorList %}
+                                    <div class="author-check d-flex align-center mb-24">
+                                            <input class="author-choose" value="{{author.authorID}}"  type="checkbox">
+                                            <span class="d-flex align-center author-pics ">
+                                            <img src="{% static 'blogs/images/image.png' %}" width="40px" height="40px" alt="">
+                                        </span>
+                                        <label for="">{{author.name}}</label>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="float-right flex_24">
+                                    <button class="close_btn modal__close"><a href="#" class="modal__close">Close</a></button>
+                                    <button class="add_btn author-add">Add</button>
+                                </div>
+                                </div>
+                                </form>
+                                <a href="#" class="modal__close close_icon">×</a>
+                                </div>
+                            
+                        </div>
+                        <div id="category-modal" data-cat="false" class="modal">
+                        <div class="modal__content">
+                            <form>
+                                <div class="container d-flex flex-column">
+                                <label>Select Category</label>
+                                <div class="cat-check-div d-flex flex-column mt-16 mb-28">
+                                    <div class="cat-check d-flex align-center ">
+                                            <input type="radio" name="categ" value="dev">
+                                            <img src="{% static 'blogs/images/img.svg' %}" alt="">
+                                            <div class="ml-24">
+                                                <h2 class="mb-8">Category Name</h2>
+                                                <p>Lorem ipsum dolor sit amet. Ut numquam 
+                                                sunt At excepturi vero </p>
+                                            </div>
+                                    </div>
+                                    <div class="cat-check d-flex align-center ">
+                                            <input type="radio" name="categ" value="design">
+                                            <img src="{% static 'blogs/images/img.svg' %}" alt="">
+                                            <div class="ml-24">
+                                                <h2 class="mb-8">Category Name</h2>
+                                                <p>Lorem ipsum dolor sit amet. Ut numquam 
+                                                sunt At excepturi vero </p>
+                                            </div>
+                                    </div>
+                                    <div class="cat-check d-flex align-center ">
+                                            <input type="radio" name="categ" value="marketing">
+                                            <img src="{% static 'blogs/images/img.svg' %}" alt="">
+                                            <div class="ml-24">
+                                                <h2 class="mb-8">Category Name</h2>
+                                                <p>Lorem ipsum dolor sit amet. Ut numquam 
+                                                sunt At excepturi vero </p>
+                                            </div>
+                                    </div>
+                                    <div class="cat-check d-flex align-center ">
+                                            <input type="radio" name="categ" value="startups">
+                                            <img src="{% static 'blogs/images/img.svg' %}" alt="">
+                                            <div class="ml-24">
+                                                <h2 class="mb-8">Category Name</h2>
+                                                <p>Lorem ipsum dolor sit amet. Ut numquam 
+                                                sunt At excepturi vero </p>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="float-right flex_24 justify-end">
+                                    <button class="close_btn modal__close"><a href="#" class="modal__close">Close</a></button>
+                                    
+                                </div>
+                                </div>
+                                </form>
+                                <a href="#" class="modal__close close_icon">×</a>
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="{% static 'blogs/js/img.js' %}"> 
+</script>
+<script src="{% static 'blogs/js/blogadd.js' %}"> 
+</script>
+
+{% if edit %}
+    <script type="text/javascript">
+        var blogData = {{blog_post}};
+        var blogContent = {{blog_content}};
+    </script>
+{% endif %}
+</html>

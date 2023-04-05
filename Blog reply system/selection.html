@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Selection</title>
+	<style>
+       .article-container,
+.selected-text-container{
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size : 20px;
+  background-color: aliceblue;
+}
+.get-selection-button {
+  background-color: #9c27b0;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+#article-text::selection {
+   background-color: #9c27b0;
+   color: #fff;
+}
+#reply_box,#reply_box1{
+  border:1px solid black;
+  width:300px;
+  height:150px;
+}
+</style>
+</head>
+<body>
+	<div class="article-container">
+		<h3>Document1</h3>
+		<p id="article-text">
+		The other day I posted an image, quite literally as a thought exercise, about how you might accomplish
+		 "nested" links. 
+         That is, a big container that is linked to one URL that contains a smaller container or 
+		text link inside of it that goes to another URL. 
+		That's harder than it might seem at first glance. The main reason being that...
+		Eric Meyer once called for more flexible linking, but even that doesn't quite 
+		handle a situation where one link is nested inside another.
+		</p>
+	  </div>
+	  
+	  <div class="selected-text-container">
+		<h3>Comment Box</h3>
+		<p id="selected-text"></p>
+    <div>
+      <!-- <button id="reply_form" onclick="openReply()">Reply</button> -->
+      
+      
+      <!-- <form class="myForm">
+      
+        <input id="reply_box" style=" margin-top: 8px;" placeholder="Reply to the Comments"><br>
+        <button type="submit" id="submit_show" style="margin-top: 8px;">Submit</button><br>
+      
+      </form> -->
+      <!-- <div class="action_container">
+        <button onclick="create_tr('table_body')">
+          Add
+        </button>
+      </div> -->
+      <!-- </div>
+      <button onclick="openaddReply()">Add Replies</button><br>
+        <div>
+      <input id="reply_box1" style=" margin-top: 8px; display: none;" placeholder="Reply to the Comments" ><br>
+      <button type="submit" id="submit_show1" style="margin-top: 8px;display:none;">Submit</button><br>
+    </div>
+      </div>  
+    <button>Add Comments</button> -->
+		<script src="selection.js"></script>
+</body>
+</html>

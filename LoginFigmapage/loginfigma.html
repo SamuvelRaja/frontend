@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./loginfigma.css">
+    <title>Figma Login</title>
+</head>
+<body>
+    <div class="outerdiv">
+        <div class="innerdiv">
+            <p class="loginpara">Login</p>
+            <img src="./glasses-png 1.svg" class="glass_img showGlass">
+            <div><img src="./face.svg" style="width:100px;" class="smiley">
+            <div><img src="left eyebrow.svg" class="left_eyebrow"></div>
+            <div><img src="right eyebrow.svg" class="right_eyebrow"></div>
+            <div class="eyes"><img src="./leftsideeye.svg" class="eyeleft">
+                <img src="./leftsideeye.svg" class="eyeright">
+            </div>
+            <div><img src="./Mouth.svg" class="mouth"></div>
+            </div>
+           
+            <form class="forms">
+                <label for="email">Email</label>
+               <div><input id="email" placeholder="Enter Email"   type="email"><span>
+                <img src="./Vectoremail.svg" class="mailsvg">
+            </span>
+        </div>    
+            <label for="password">Password</label>
+           <div><input id="passInput" type="password" onclick="passValue()"  placeholder="Enter Password">
+        <i class="fa-solid fa-eye-slash"  style="color:#7B7B7B;position: absolute;right: 140px;padding: 8px;" 
+        id="togglePassword" class="eyesvg" onclick="showPassword()"></i></div>
+        <button type="login" class="btnlogin">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="./loginfigma.js"></script>
+</body>
+</html>

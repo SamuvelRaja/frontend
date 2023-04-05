@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nested Comments</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="article-container">
+		<h3>Document1</h3>
+		<p id="article-text" class="article-text">
+		The other day I posted an image, quite literally as a thought exercise, about how you might accomplish
+		 "nested" links. 
+         That is, a big container that is linked to one URL that contains a smaller container or 
+		text link inside of it that goes to another URL. 
+		That's harder than it might seem at first glance. The main reason being that...
+		Eric Meyer once called for more flexible linking, but even that doesn't quite 
+		handle a situation where one link is nested inside another.
+		</p>
+	  </div>
+    <div class="container">
+        <div id="comment-container" class="comment-container">
+            <div class="all-comment">
+                <div class="card">
+                    <span class="text">First Comment</span>
+                    <div>                    
+                        <p id="selected-text" ></p>
+                    <input type="text" id="myText">
+                </div>
+<br>
+                    <button onclick="myFunction()">Submit</button><br>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- <span id="newcomment" class="newcomment" onclick="addcomment()">Add new comments</span>
+    <div class="all-comment" id="addeddiv" style="display: none;">
+        <div class="card1">
+            <span class="text1">New Comment</span>
+            <p id="selected-text1"></p>
+            <span id="reply1" class="reply1">Add Reply</span>
+            
+        </div>
+    </div> -->
+    <div id="commentreply">
+    <p id="demo"></p>
+    <span id="reply" class="reply"  onclick="showdiv()">Add Reply</span>
+</div>
+
+<div class="comment-details" id="comment-details" style="display: none;">
+    <input type="text" placeholder="add text here" class="input" />
+    <button class="btn submit" value="submit">Submit</button>
+</div>
+    <script src="finalblog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog reply system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+    p::selection{
+            background-color: blanchedalmond;
+        }
+    p .ellip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+    </style>
+</head>
+<body>
+    <h1>Blog Replies</h1>
+    <p>
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+        used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+        Lorem ipsum may be used as a placeholder before final copy is available.
+    </p>
+    <!-- <input type="button" value="Reply" onmousedown="getSelectedText()"> -->
+    <i class="fas fa-long-arrow-right" onmousedown="getSelectedText()"  id="reply-icon" style="display: none;"></i>
+    <form name="testform" class="ellip">
+        <textarea name="selectedtext"   rows="5" cols="20" id="textarea_show"  style="display: none;" ></textarea>
+    </form>
+    <script>
+        // Function to get the Selected Text
+        function getSelectedText() {
+            // var selectedText = '';
+            // window.getSelection
+            if (window.getSelection) {
+              const selectedText = window.getSelection().toString().trim();
+              console.log(selectedText);
+               
+                 document.getElementById("text_show").style.display = "block";
+                //  document.getElementById("icon_show").style.display = "block";
+                //  document.getElementById("text_area").style.display = "block";
+                
+            }
+            // document.getSelection
+            else if (document.getSelection){
+                selectedText = document.getSelection();
+             }
+            // document.selection
+            else if (document.selection) {
+                selectedText =
+                 document.selection.createRange().text;
+            } 
+            else return;
+            // To write the selected text into the textarea
+            document.testform.selectedtext.value = selectedText;
+        }
+        var selectedText;
+    document.addEventListener("mousedown",replyMouseDown);
+    function replyMouseDown(event){
+        if(getComputedStyle(reply).display==="block" && event.target.id!=="reply-icon"){
+
+            reply.addEventListener("click",function(){
+        document.getElementById("textarea_show").style.display = "block";
+        document.testform.selectedtext.value = selectedText;
+
+    });
+         //reply.style.display = "none";
+         //window.getSelection().empty();
+        }  
+          
+    }
+    </script>
+</body>
+</html>

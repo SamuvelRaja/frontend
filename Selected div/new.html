@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img{
+width:100px;
+height:100px;
+}
+.list{
+    border: 1px solid black;
+    padding: 32px;
+}
+ .list1{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    border: 1px solid red;
+} 
+.second{
+    width:200px;
+    height: 200px;
+    border:1px solid green;
+}
+</style>
+</head>
+<body>
+<div class="list">
+</div>
+<div class="Second"></div>
+<script>
+const person =[ {
+  id:0,
+  image: "./Group 19.png",
+  title: "First Blog",
+  description:"lorem ipsfvhfbsfv dsjfhbskjdf ddfjkbkjsdb defdsfdfdfdfsd"
+},{
+  id:1,
+  image: "https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg",
+  title: "Second Blog",
+  description:"lorem ipsfvhfbsfv dsjfhbskjdf ddfjkbkjsdb defdsfdfdfdfsd"
+},
+{
+  id:2,
+  image: "https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg",
+  title: "Third Blog",
+  description:"lorem ipsfvhfbsfv dsjfhbskjdf ddfjkbkjsdb defdsfdfdfdfsd"
+},
+{
+  id:3,
+  image: "https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg",
+  title: "Fourth Blog",
+  description:"lorem ipsfvhfbsfv dsjfhbskjdf ddfjkbkjsdb defdsfdfdfdfsd"
+},
+{
+  id:4,
+  image: "./Group 19.png",
+  title: "Fifth Blog",
+  description:"lorem ipsfvhfbsfv dsjfhbskjdf ddfjkbkjsdb defdsfdfdfdfsd"
+}];
+
+for(var i=0;i<person.length;i++){
+var imgs=document.createElement("img");
+var titles = document.createElement("h3");
+var describe = document.createElement("p");
+var division = document.createElement("div");
+
+division.classList.add("list1");
+document.querySelector(".list").appendChild(division);
+imgs.src=person[i].image;
+division.appendChild(imgs);
+
+var innerdivision = document.createElement("div");
+titles.innerText=person[i].title;
+division.appendChild(titles);
+innerdivision.appendChild(titles);
+
+describe.innerText = person[i].description;
+division.appendChild(describe);
+innerdivision.appendChild(describe);
+division.appendChild(innerdivision);
+}
+</script>
+
+</body>
+</html>
