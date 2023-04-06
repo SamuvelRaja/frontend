@@ -52,13 +52,17 @@ function chooseColor(){
    var myFont = document.getElementById("input-font").value;
    document.execCommand('fontName', false, myFont);
  }
+ function changeFont1(){
+   var myFont1 = document.getElementById("input-font1").value;
+   document.execCommand('fontSize', false, myFont1);
+ }
  const search = document.getElementById("search");
  search.addEventListener('input', (event) => {
    const searchText = event.target.value;
    const regex = new RegExp(searchText, 'gi');
 
    let text = editable.innerHTML;
-  //text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+   text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
 
   const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
   editable.innerHTML = newText;

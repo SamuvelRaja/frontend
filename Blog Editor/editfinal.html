@@ -9,16 +9,15 @@
 </head>
 <body>
     <div class="edit">
-         <select  data-element="heading" class="btns">
-            <option value="H1">Heading1</option>
-            <option value="H2">Heading2</option>
-            <option value="H3">Heading3</option>
-            <option value="H4">Heading4</option>
-            <option value="H5">Heading5</option>
-            <option value="H6">Heading6</option>
-            <option value="p">Paragraph</option>
+         <select  id="input-font1" class="input1" onchange="changeFont1 (this);">
+            <option value="7">Heading1</option>
+            <option value="6">Heading2</option>
+            <option value="5">Heading3</option>
+            <option value="4">Heading4</option>
+            <option value="3">Heading5</option>
+            <option value="2">Heading6</option>
+            <option value="1">Paragraph</option>
         </select>
-        <!-- <input type="number" data-element="fontSize" id="font-size" min="1" max="100" value="10" onchange="f1(this)"> -->
         <select id="input-font" class="input"  onchange="changeFont (this);">
             <option value="Arial">Arial</option>
             <option value="Sans Serif" selected>Sans Serif</option>
