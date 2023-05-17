@@ -28,6 +28,7 @@
   if ( scrollPos > 100 ) {
     site.style.backgroundColor = "white";
     site.style.boxShadow="10px 9px 48px rgb(4 32 52 / 10%)";
+    site.style.zIndex="999";
   } else {
     site.style.backgroundColor = "";
     site.style.boxShadow="none";

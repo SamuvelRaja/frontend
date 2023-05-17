@@ -469,9 +469,9 @@ button[type="submit"] {
  body{
   overflow-x: hidden;
  }
- .toggle{
+ /* .toggle{
 
- }
+ } */
  .hide_nav{
     display: none;
  }

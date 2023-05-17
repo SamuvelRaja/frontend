@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./imginsert.css">
+    <title>Insert Image</title>
+</head>
+<body>
+    <div class="zem-imgprev d-flex flex-column align-center justify-center mb-28">
+<div class="single-img-box d-none">
+    <span class="upload-close">x</span></div>
+    <img src="{% static 'blogs/images/imgrep.svg' %}" width="22px" height="17px" alt="">
+    <p class="mt-4">Image Size: 1200 * 630</p>
+    <input type="file" class="upload__inputfile" name="og-img" id="" style="opacity: 0;" >
+    </div>
+    <script>
+        var imgWrap = "";
+  var imgbox=document.querySelectorAll(".single-img-box");
+  var uploadbox=document.querySelectorAll(".upload__inputfile");
+  [...uploadbox].forEach(node => {
+
+    node.addEventListener("change", function (e) {
+      imgWrap = this;
+      var maxLength = 1
+      var eind=[...uploadbox].indexOf(e.target)
+
+      var files = e.target.files;
+      var filesArr = Array.prototype.slice.call(files);
+      var iterator = 0;
+      var singleimg = document.querySelectorAll(".single-img-box")[eind];
+
+      filesArr.forEach(function (f, index) {
+        if (!f.type.match("image.*")) {
+          return;
+        }else {
+
+            var reader = [];
+            reader = new FileReader();
+            reader.onload = function (e) {
+
+              var urlCreator = window.URL || window.webkitURL;
+              var imageUrl = urlCreator.createObjectURL(f);
+              // console.log(imageUrl)
+              singleimg.classList.remove('d-none')
+              singleimg.style.backgroundImage="url(" +imageUrl +")"
+              uploadbox[eind].classList.add('d-none')
+              //close btn
+              singleimg.querySelector(".upload-close").addEventListener("click",function () {
+                singleimg.classList.add('d-none')
+                uploadbox[eind].classList.remove('d-none')
+                uploadbox[eind].value="";
+      })
+            };
+            reader.readAsArrayBuffer(f);
+          }
+
+    </script>
+</body>
+</html>

@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="./editfinal.css">
 </head>
 <body>
-    <div class="edit">
-         <select  id="input-font1" class="input1" onchange="changeFont1 (this);">
-            <option value="7">Heading1</option>
-            <option value="6">Heading2</option>
-            <option value="5">Heading3</option>
-            <option value="4">Heading4</option>
-            <option value="3">Heading5</option>
-            <option value="2">Heading6</option>
-            <option value="1">Paragraph</option>
+    <div class="edit" id="act">
+         <!-- <select  id="input-font1" class="input1" onchange="changeFont1 (this);"> -->
+            <select onchange="formatDoc('formatBlock', this.value);">
+            <option value="" selected="" hidden="" disabled="">Format</option>
+            <option value="h1" >Heading1</option>
+            <option value="h2">Heading2</option>
+            <option value="h3">Heading3</option>
+            <option value="h4">Heading4</option>
+            <option value="h5">Heading5</option>
+            <option value="h6">Heading6</option>
+            <option value="p">Paragraph</option>
         </select>
+        
+            <!-- <button data-element="formatBlock" data-block="H1" class="btns">H1</button>
+            <button data-element="formatBlock" data-block="H2" class="btns">H2</button>
+            <button data-element="formatBlock" data-block="H3" class="btns">H3</button>
+            <button data-element="formatBlock" data-block="H4" class="btns">H4</button>
+            <button data-element="formatBlock" data-block="H5" class="btns">H5</button>
+            <button data-element="formatBlock" data-block="H6" class="btns">H6</button> -->
+
+        
         <select id="input-font" class="input"  onchange="changeFont (this);">
             <option value="Arial">Arial</option>
             <option value="Sans Serif" selected>Sans Serif</option>
@@ -33,70 +44,45 @@
             <option value="Palatino">Palatino</option>
             <option value="Georgia">Georgia</option>
         </select>
-        <!-- <select  onchange="changeFont(this);">
-            <option value="12">12</option>
-            <option value="14">14</option>
-            <option value="14">16</option>
-            <option value="14">18</option>
-            <option value="14">20</option>
-        </select> -->
-        <!-- <div  class="tooltip">
-        <button data-element="bold" class="btns"><img src="./Bold.svg"></button>
-        <span class="tooltiptext">Bold</span>
-        </div> -->
-       <button data-element="bold" class="btns"><img src="./Bold.svg"></button>
-       <button data-element="italic" class="btns" ><img src="./Italics.svg"></button>
-       <button data-element="underline" class="btns"><img src="./underlined.svg"></button>
-       <button data-element="strikeThrough" class="btns"><img src="./Strikeout.svg"></button>
-       <button data-element="insertUnorderedList" class="btns"><img src="./bullets.svg"></button>
-       <button data-element="insertOrderedList" class="btns"><img src="./Numbers.svg"></button>
-       <button data-element ="Subscript" class="btns"><img src="./Subscript.svg"></button>
-       <button data-element ="Superscript" class="btns"><img src="./Superscript.svg"></button>
-       <button data-element ="JustifyCenter" class="btns"><img src="./Group 458.svg"></button>
-       <button data-element ="JustifyRight" class="btns"><img src="./Right align.svg"></button>
-       <button data-element ="JustifyLeft" class="btns"><img src="./Left align.svg"></button>
-       <button data-element ="JustifyFull" class="btns"><img src="./Justify.svg"></button>
-       <button onclick="indleft()"><img src="./Indent Right.svg"></button>
-       <button onclick="indright()"><img src="./Indent left.svg"></button>
-       <button data-element="createLink" class="btns link" id="createLink"><img src="./Add link.svg"></button>
-       <button data-element="unlink" class="btns"><img src="./Disconnect link.svg"></button>
-       <button><img src="./Search.svg"></button>
-       <button id="findbtn" onclick="openPopup()"><img src="./Find and Replace.svg"></button>
-       <div class="popup" id="popup">
-        <label>Find</label>
-        <input type="text" id="typo" placeholder="Text to be replaced">
-        <label>Replace</label>
-        <input type="text" id="correctWord"  placeholder="Correct word"><br>
-        <button id="replace">Replace</button>
-        <button onclick="closePopup()"> OK</button>
-       </div>
-       <button data-element="removeFormat" class="btns"><img src="./Remove  S.svg"></button>
-       
+        
+       <button data-element = "bold" class="btns btn_active" ><img src="./Bold.svg"></button>
+       <button data-element = "italic" class="btns btn_active"><img src="./Italics.svg"></button>
+       <button data-element = "underline" class="btns btn_active"><img src="./underlined.svg"></button>
+       <button data-element = "strikeThrough" class="btns btn_active"><img src="./Strikeout.svg"></button>
+       <button data-element = "insertUnorderedList" class="btns btn_active"><img src="./bullets.svg"></button>
+       <button data-element = "insertOrderedList" class="btns btn_active"><img src="./Numbers.svg"></button>
+       <button data-element = "Subscript" class="btns btn_active"><img src="./Subscript.svg"></button>
+       <button data-element = "Superscript" class="btns btn_active"><img src="./Superscript.svg"></button>
+       <button data-element = "JustifyCenter" class="btns btn_active"><img src="./Group 458.svg"></button>
+       <button data-element = "JustifyRight" class="btns btn_active"><img src="./Right align.svg"></button>
+       <button data-element = "JustifyLeft" class="btns btn_active"><img src="./Left align.svg"></button>
+       <button data-element = "JustifyFull" class="btns btn_active"><img src="./Justify.svg"></button>
+       <button data-element = "indent" class="btns btn_active"><img src="./Indent Right.svg"></button>
+       <button data-element = "outdent" class="btns btn_active"><img src="./Indent left.svg"></button>
+       <button data-element = "createLink" class="btns link btn_active" id="createLink"><img src="./Add link.svg"></button>
+       <button data-element = "unlink" class="btns btn_active"><img src="./Disconnect link.svg"></button>
       
+       <button data-element="removeFormat" class="btns btn_active"><img src="./Remove  S.svg"></button>
+       <button  id="code" class="code1" onclick="codeopen()" class="btn_active"><img src="./Code.svg"></button>
+
+       <button  id="show-code" data-active="false"  class="btn_active"><img src="./Source Code.svg"></button>
+       <button data-element="insertHorizontalRule" class="btns btn_active"><img src="./Subscriptline.svg"></button>
        
-       <button  id="show-code" data-active="false"><img src="./Source Code.svg"></button>
-    
-       <button data-element="insertHorizontalRule" class="btns"><img src="./Subscriptline.svg"></button>
-       <button data-element="insertImage" class="btns"><img src="./Add Image.svg"></button>
-       <!-- <button data-element="enableInlineTableEditing" class="btns"><img src="./Table.svg"></button> -->
-       <button ><img src="./text Color.svg"><span><input type="color" onchange="chooseColor()" id="myColor"></span></button>
-       <button><img src="./Highlight.svg"><span><input type="color" onchange="chooseBg()" id="myBg"></span></button>
-       <button data-element="undo" class="btns"><img src="./Undo.svg"></button>
-       <button data-element="redo" class="btns"><img src="./Redo.svg"></button>
-       <button><img src="./Quote.svg"></button>
+       <button class="mycolor btn_active"><img src="./text Color.svg"><span><input type="color" onchange="chooseColor()" 
+        id="myColor"></span></button>
+       <button class="mybg btn_active"><img src="./Highlight.svg"><span><input type="color" onchange="chooseBg()" 
+        id="myBg"></span></button>
+       <button data-element="undo" class="btns btn_active1"><img src="./Undo.svg"></button>
+       <button data-element="redo" class="btns btn_active1"><img src="./Redo.svg"></button>
+       <button data-element="formatBlock"  data-block="blockquote" class="btns btn_active">
+        <img src="./Quote.svg"></button>
+       <button onclick="document.querySelector('.filechose').click()" style="background: none; border:none;"> 
+        <input type="file" class="filechose" style="display: none;">
+        <img src="./Add Image.svg">
+    </button>
     </div>
-    <div role="textbox" contenteditable="true" aria-multiline="true" class="editorbox" id="editbox"></div>
-    </div>
-    <input
-      id="search"
-      placeholder="Type `web` for example"
-      type="search"
-      autocomplete="off"
-    />
-    <!-- <input id="typo" placeholder="typo" type="text">
-    <input id="correctWord" placeholder="correct word" type="text">
-    <button id="replace">Replace</button>
-    <br> -->
-    <script src="./editfinal.js"></script>
+<div role="textbox" contenteditable="true"  aria-multiline="true" class="editorbox" id="editbox" name="textField">
+</div>
+<script src="./editfinal.js"></script>
 </body>
 </html>

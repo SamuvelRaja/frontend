@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .editorbox{
+    height: 450px;
+    border: 1px solid #000;
+}
+.highlight {
+        background-color: #EEF43B;
+      }
+      .open-popup{
+        visibility: visible;
+    }
+      .link{
+        cursor: pointer;
+      }
+      #findshow{
+  position: absolute;
+  top:200px;
+  left: 200px;
+}
+    </style>
+</head>
+<body>
+    <input type="file" id="uploadBtnforImg" style="display: none;">
+     <button><img src="./Search.svg"></button>
+       <button id="findbtn" onclick="myFunction()"><img src="./Find and Replace.svg"></button>
+       <!-- <button data-element="enableInlineTableEditing" class="btns"><img src="./Table.svg"></button> -->
+       <main style="display: none;" id="findshow">
+        <form action="#" method="post">
+            <div>
+                <label for="find">Find: </label>
+                <input type="text" id="find" />
+            </div>
+            <div>
+                <label for="replace">Replace: </label>
+                <input type="text" id="replace" />
+            </div>
+            <div>
+                <button id="btnSearch">Go</button>
+            </div>
+        </form>
+        </main>
+        <input
+      id="search"
+      placeholder="Type `web` for example"
+      type="search"
+      autocomplete="off"/>  
+      <div role="textbox" contenteditable="true" aria-multiline="true" class="editorbox" id="editbox"></div> 
+<script>
+    var editable = document.getElementById("editbox");
+    function myFunction() {
+   var x = document.getElementById("findshow");
+   if (x.style.display === "block") {
+     x.style.display = "none";
+   } else {
+     x.style.display = "block";
+   }
+ }
+ 
+ document.addEventListener('input', function(){
+   let btn = document.getElementById('btnSearch');
+   btn.addEventListener('click', doFindAndReplace);
+});
+
+function doFindAndReplace(ev){
+   ev.preventDefault();
+   
+   let find = document.getElementById('find').value;
+   let replace = document.getElementById('replace').value;
+   
+   let p = document.querySelector('.editorbox');
+   
+   while( p.textContent.indexOf(find) != -1 ){
+       p.textContent = p.textContent.replace(find, replace);
+   }  
+}
+//search text in editors
+const search = document.getElementById("search");
+ search.addEventListener('input', (event) => {
+   const searchText = event.target.value;
+   const regex = new RegExp(searchText, 'gi');
+
+   let text = editable.innerHTML;
+   text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+
+  const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
+  editable.innerHTML = newText;
+});
+//insert Images to the editor
+//  imageInsert = document.getElementById("imageInsert")
+// imageInsert.addEventListener("click",function(){
+//    uploadBtnforImg = document.getElementById("uploadBtnforImg")
+//    uploadBtnforImg.click();
+//    //create FileReader object
+//    readerImg = new FileReader()
+//    uploadBtnforImg.addEventListener('change',function(){
+//       chosedFile = this.files[0]; 
+//       console.log(chosedFile);
+//       readerImg.onload= function(e){
+//          //e.target.result will give the file name
+//          url = e.target.result
+//          document.execCommand('insertHTML',false, `<img src=${url}`)
+//       }
+//       readerImg.abort()
+//       if(chosedFile){ 
+//          readerImg.readAsDataURL(chosedFile)
+//       }
+   
+//    })
+// })
+// https://www.fearfreehappyhomes.com/wp-content/uploads/2020/08/shutterstock_707431309-e1554172878508.jpg
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("act");
+var btns = header.getElementsByClassName("btn_active");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active1");
+  if (current.length > 0) { 
+  current[0].className = current[0].className.replace(" active1", "");
+  }
+  this.className += " active1";
+  });
+}
+</script>
+    </body>
+</html>

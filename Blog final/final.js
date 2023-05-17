@@ -10,26 +10,26 @@ function createInputBox() {
     <button class="btn submit">Submit</button>`;
   return div;
 }
-// let addeddiv = document.getElementById("addeddiv");
-// function createInputBox1(){
-//   let div = document.createElement("div");
-//   div.innerHTML +=`<div class="all-comment" id="addeddiv">
-//         <div class="card1">
-//             <span class="text1">New Comment</span>
-//             <p id="selected-text1"></p>
-//             <span id="reply1" class="reply1">Add Reply</span>
+let addeddiv = document.getElementById("addeddiv");
+function createInputBox1(){
+  let div = document.createElement("div");
+  div.innerHTML +=`<div class="all-comment" id="addeddiv">
+        <div class="card1">
+            <span class="text1">New Comment</span>
+            <p id="selected-text1"></p>
+            <span id="reply1" class="reply1">Add Reply</span>
             
-//         </div>
-//     </div>`;
-//     return div;
-// }
-// addeddiv.addEventListener("click", function (e){
-//   let addcommentsClicked = e.target.classList.contains("newcomment");
-//   if (addcommentsClicked) {
-//     closestCard.appendChild(createInputBox1());
-//   }
+        </div>
+    </div>`;
+    return div;
+}
+addeddiv.addEventListener("click", function (e){
+  let addcommentsClicked = e.target.classList.contains("newcomment");
+  if (addcommentsClicked) {
+    closestCard.appendChild(createInputBox1());
+  }
 
-// });
+});
 
 function addReply(text) {
   let div = document.createElement("div");
